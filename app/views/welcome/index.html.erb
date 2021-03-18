@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="topBar" style="text-align:center;">
+    <h1 class="titleCard">Reverse Roast Card Game</h1>
+    <h3>Vote who gets the card!</h3>
+</div>
+<div class="d-flex flex-wrap justify-content-center">
+<div class="card bg-dark text-light mb-3" style="width: 30rem;height: 10rem;margin: 10px">
+    <h1 class="card-body text-center">
+    <%= link_to @posts.all.sample.prompt.truncate(50), root_path, class: "drawnCard" %>
+    </h1>
+    <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Tap For New Prompt</h6>
+</div>
+</div>
+
+<div></div>
+<div style="text-align:center">
+  <%= link_to 'Make new prompts', posts_path, class: "btn btn-dark" %>
+  </div>

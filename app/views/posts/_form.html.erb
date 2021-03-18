@@ -1,0 +1,23 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div style="text-align:center;">
+<div class="form-control" style="width:500px;">
+  <div class="field">
+    <%= form.label :prompt %> (Maximum length: 50 characters):<br>
+    <%= form.text_field :prompt, :maxlength => 50 %>
+  </div></div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div></div>
+<% end %>
